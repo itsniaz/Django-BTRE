@@ -1,5 +1,8 @@
 from django.contrib import admin
-
 from .models import Realtor
 
-admin.site.register(Realtor)
+class RealtorAdmin(admin.ModelAdmin):
+    list_display = ["name","email","phone","photo"]
+    
+
+admin.site.register(Realtor, RealtorAdmin)

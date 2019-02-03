@@ -1,7 +1,18 @@
 from django.shortcuts import render
+from .models import Listing
+
+
+
 
 def listings(request):
-    return render(request, "pages/listings.html")
+    listingsList = Listing.objects.all()
+
+
+    context = {
+        'listings' : listingsList
+    }
+
+    return render(request, "pages/listings.html", context)
 
 def listing(request):
     return render(request,"pages/listing.html")

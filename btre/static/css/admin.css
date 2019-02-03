@@ -1,0 +1,29 @@
+*
+{
+    font-family: 'Titillium Web', sans-serif;
+}
+#header {
+    width: auto;
+    height: 80px;
+    padding: 10px 40px;
+    background: #4CAF50;
+    line-height: 40px;
+    color: #212121;
+    overflow: hidden;
+}
+
+#header a:link, #header a:visited
+{
+    color: #212121;
+}
+
+#branding h1, #branding h1 a:link, #branding h1 a:visited
+{
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.module h2, .module caption, .inline-group h2
+{
+    background: #4CAF50;
+}
