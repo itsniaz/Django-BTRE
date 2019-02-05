@@ -30,4 +30,11 @@ def listing(request, listing_id):
     return render(request,"pages/listing.html", context)
 
 def search(request):
-    return render(request, "pages/search.html")
+
+    listings = Listing.objects.filter(description__icontains="TEST")
+
+    context = {
+        "listings" : listings
+    }
+
+    return render(request, "pages/search.html", context)
